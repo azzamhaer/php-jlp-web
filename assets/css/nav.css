@@ -1,0 +1,630 @@
+body {
+  transition: background-color 0.3s; /* Efek transisi untuk perubahan warna latar belakang */
+}
+
+.bottom-navbar {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  color: #139c59;
+  background: #fff;
+  border-radius: 0px;
+  padding: 10px 0;
+  box-shadow: rgba(0, 0, 0, 0.8) 0px 22px 100px 25px;
+}
+
+.bottom-navbar a {
+  text-decoration: none;
+}
+
+.bottom-navbar button {
+  width: 60px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  background: transparent;
+  flex-direction: column; /* Mengatur tombol untuk menggunakan layout kolom */
+  transition: all 0.25s ease;
+  color: #139c59;
+}
+
+
+
+.bottom-navbar button span {
+  font-size: 0.8rem; /* Ukuran font untuk teks penjelas */
+  color: #139c59; /* Warna teks penjelas */
+  margin-top: 5px; /* Jarak antara ikon dan teks */
+  text-align: center; /* Memusatkan teks */
+  transition: color 0.25s ease; /* Tambahkan transisi untuk warna */
+}
+
+
+
+.bottom-navbar button i {
+  font-size: 1.5rem;
+  pointer-events: none;
+}
+.bottom-navbar button span {
+  font-size: 0.8rem; /* Ukuran font untuk teks penjelas */
+  color: #139c59; /* Warna teks penjelas */
+  margin-top: 5px; /* Jarak antara ikon dan teks */
+  text-align: center; /* Memusatkan teks */
+}
+
+.con-effect {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.effect {
+  background: #99e2c0;
+  filter: opacity(0.5);
+  width: 70px;
+  height: 50px;
+  position: absolute;
+  left: 1px;
+  border-radius: 18px;
+}
+.effect {
+  display: none; /* Sembunyikan efek secara default */
+}
+
+.container-nav {
+  position: fixed;
+  top: calc(var(--vh, 1vh) * 100);
+  width: 100%;
+  height: calc(var(--vh, 1vh) * 50);
+  background: #fff;
+  border-radius: 30px 30px 0 0;
+  padding-top: 40px;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.05);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.container-nav::after {
+  content: "";
+  left: 50%;
+  top: -14px;
+  width: 45px;
+  height: 4px;
+  background: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  transform: translate(-50%);
+  border-radius: 20px;
+}
+
+.container-nav a {
+  width: 70%;
+  padding-top: 20px;
+  font-size: 0.8rem;
+  text-align: center;
+  font-weight: 500;
+  opacity: 0.7;
+}
+
+.container-nav img {
+  width: 75%;
+}
+
+.container-nav button {
+  padding: 12px 30px;
+  background: rgb(232, 76, 79);
+  color: #fff;
+  border: 0;
+  margin-top: 20px;
+  border-radius: 17px;
+}
+
+#closeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: rgb(232, 76, 79);
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.container-nav::before {
+  content: "";
+  left: 0;
+  bottom: -150px;
+  width: 100%;
+  height: 150px;
+  background: #fff;
+  position: absolute;
+}
+
+@media (max-width: 768px) {
+  .container-nav img {
+    width: 90%;
+  }
+
+  .container-nav p {
+    font-size: 1rem;
+  }
+  .bottom-navbar {
+    border-radius: 30px 30px 0 0;
+  }
+}
+
+@media (max-width: 481px) {
+  .icon-box,
+  .wrapper,
+  .header-btn-group {
+    display: none !important;
+  }
+
+  .header-top .logo{
+    padding-left: 30px;
+    margin-right: auto;
+  }
+}
+
+.menu-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.menu-item {
+  background-color: #ffffff;
+  border-radius: 25px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.2s;
+  text-decoration: none; /* Remove underline for links */
+  color: #333; /* Set text color for links */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertically center the content */
+  align-items: center; /* Horizontally center the content */
+  height: 150px; /* Adjust this height as needed */
+}
+
+.menu-item img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px; /* Space between image and text */
+}
+
+.menu-item p {
+  font-size: 14px;
+  color: #333;
+}
+
+
+
+.bottom-navbar button {
+  position: relative; /* Pastikan tombol memiliki posisi relatif */
+  flex-direction: column; /* Mengatur tombol untuk menggunakan layout kolom */
+}
+
+/* Responsive adjustments for .container-nav */
+@media (max-width: 768px) {
+  .container-nav {
+    height: calc(var(--vh, 1vh) * 60); /* Adjust height for smaller screens */
+    padding-top: 20px;
+  }
+
+  .container-nav button {
+    padding: 10px 20px;
+  }
+
+  .container-nav a {
+    width: 80%; /* Adjust link width */
+  }
+}
+
+@media (max-width: 480px) {
+  .container-nav {
+    height: calc(var(--vh, 1vh) * 70); /* Increase height slightly for mobile */
+    padding-top: 15px;
+  }
+
+  .container-nav button {
+    padding: 8px 16px; /* Adjust padding for mobile */
+  }
+
+  .container-nav a {
+    width: 90%; /* Further adjust link width */
+  }
+
+  .bottom-navbar button {
+    width: 45px; /* Reduce button size more for very small screens */
+    height: 40px;
+  }
+}
+
+/* Further improve the container nav text and image scaling */
+@media (max-width: 480px) {
+  .container-nav img {
+    width: 80%; /* Reduce image size on mobile */
+  }
+
+  .container-nav p {
+    font-size: 0.9rem; /* Adjust text size */
+  }
+}
+
+/* hero */
+/* search */
+.tour-search {
+  background: var(--bright-navy-blue);
+  padding-block: var(--section-padding);
+}
+
+.tour-search-form .input-label {
+  color: transparent;
+  font-size: var(--fs-4);
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+.tour-search-form-hero .input-field {
+  transition: opacity 0.3s ease-in-out;
+}
+
+.tour-search-form .input-field::placeholder {
+  color: var(--spanish-gray);
+}
+
+.tour-search-form .input-field::-webkit-datetime-edit {
+  color: var(--spanish-gray);
+  text-transform: uppercase;
+}
+
+.tour-search-form .input-wrapper {
+  margin-bottom: 15px;
+}
+.tour-search-form-hero {
+  position: relative; /* Agar kita bisa mengatur posisi form */
+  z-index: 1; /* Pastikan form berada di atas latar belakang */
+}
+
+.menu-container-hero {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Default: 4 kolom */
+  gap: 10px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.menu-container-hero .menu-item-hero {
+  border-radius: 25px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 10px;
+  transition: transform 0.2s;
+  text-decoration: none; /* Remove underline for links */
+  color: #333; /* Set text color for links */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertically center the content */
+  align-items: center; /* Horizontally center the content */
+  height: 150px; /* Tinggi item untuk tampilan normal */
+}
+
+.menu-container-hero .menu-item-hero .img-icon {
+  width: 60px; /* Ukuran ikon */
+  height: 60px; /* Tinggi sama dengan lebar */
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%; /* Agar gambar menjadi bulat */
+  position: relative;
+}
+
+.menu-container-hero .menu-item-hero img {
+  width: 50px; /* Ukuran gambar */
+  height: 50px; /* Tinggi sama dengan lebar */
+  object-fit: cover; /* Mengisi area secara proporsional */
+}
+
+.menu-container-hero .menu-item-hero p {
+  font-size: 16px; /* Ukuran font */
+  color: #fff;
+  font-weight: 400;
+}
+
+
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .menu-container-hero {
+    grid-template-columns: repeat(4, 1fr); /* 4 kolom pada layar kecil */
+    grid-auto-rows: 150px; /* Menjaga tinggi baris tetap konsisten */
+  }
+}
+
+@media (max-width: 480px) {
+  .menu-container-hero {
+    grid-template-columns: repeat(4, 1fr); /* Tetap 4 kolom pada layar handphone */
+    gap: 8px; /* Mengurangi jarak antar item */
+  }
+
+  .menu-container-hero .menu-item-hero {
+    height: 120px; /* Mengurangi tinggi item untuk tampilan handphone */
+    padding: 5px 2px 5px 0px; /* Mengurangi padding */
+  }
+
+  .menu-container-hero .menu-item-hero img {
+    width: 30px; /* Mengurangi ukuran gambar */
+    height: 30px; /* Tinggi sama dengan lebar */
+  }
+
+  .menu-container-hero .menu-item-hero .img-icon {
+    width: 40px; /* Mengurangi ukuran gambar */
+    height: 40px; /* Tinggi sama dengan lebar */
+  }
+
+  .menu-container-hero .menu-item-hero p {
+    font-size: 14px; /* Mengurangi ukuran font */
+  }
+
+  .tour-search-form-hero {
+    width: 300px;
+    margin: auto;
+  }
+}
+
+@media (max-width: 321px) {
+  .tour-search-form-hero {
+    width: 250px;
+    margin: auto;
+  }
+
+  .menu-container-hero {
+    grid-template-columns: repeat(4, 1fr); /* Tetap 4 kolom pada layar handphone */
+    gap: 4px; /* Mengurangi jarak antar item */
+  }
+
+  .menu-container-hero .menu-item-hero {
+    height: 120px; /* Mengurangi tinggi item untuk tampilan handphone */
+    padding: 3px 1px 3px 0px; /* Mengurangi padding */
+  }
+
+  .menu-container-hero .menu-item-hero img {
+    width: 20px; /* Mengurangi ukuran gambar */
+    height: 20px; /* Tinggi sama dengan lebar */
+  }
+
+  .menu-container-hero .menu-item-hero .img-icon {
+    width: 30px; /* Mengurangi ukuran gambar */
+    height: 30px; /* Tinggi sama dengan lebar */
+  }
+
+  .menu-container-hero .menu-item-hero p {
+    font-size: 12px; /* Mengurangi ukuran font */
+  }
+}
+.section-title-hero {
+  font-size: 50px; /* Ukuran font judul */
+  font-weight: 500;
+  margin-bottom: 60px;
+}
+
+@media (max-width: 768px) {
+  .section-title-hero {
+    font-size: 26px; /* Mengurangi ukuran font judul untuk layar kecil */
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 321px) {
+  .section-title-hero {
+    font-size: 22px;
+    font-weight: 300; /* Mengurangi ukuran font judul untuk layar kecil */
+    margin-bottom: 20px;
+  }
+}
+.input-wrapper {
+  position: relative;
+  display: flex; /* Menggunakan flexbox untuk penataan */
+  align-items: center; /* Menyelaraskan item secara vertikal */
+}
+
+.input-wrapper i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 10px;
+  transition: opacity 0.3s ease-in-out;
+  color: #aaa;
+  font-size: 30px;
+  height: auto;
+}
+
+.input-wrapper input:focus + i {
+  opacity: 0;
+}
+
+.input-wrapper input:not(:focus) + i {
+  opacity: 1;
+}
+
+.input-field {
+  padding-left: 40px; /* Memberikan ruang untuk ikon */
+  /* Gaya input lainnya */
+  height: 60px;
+}
+
+.placeholder {
+  position: absolute;
+  bottom: 20px;
+  left: 60px; /* Sesuaikan dengan posisi input agar tidak tertutup ikon */
+  color: #aaa;
+  transition: all 0.3s ease;
+  opacity: 1; /* Placeholder selalu terlihat */
+  pointer-events: none; /* Agar tidak bisa diklik */
+}
+
+.placeholder.moving-up {
+  transform: translateY(-20px); /* Pindahkan placeholder ke atas */
+  opacity: 0; /* Hilangkan placeholder */
+}
+
+.placeholder.moving-in {
+  transform: translateY(0); /* Placeholder baru muncul di posisi yang sama */
+  opacity: 1; /* Tampilkan placeholder */
+}
+
+.placeholder.new {
+  transform: translateY(20px); /* Placeholder baru muncul dari bawah */
+  opacity: 0; /* Sembunyikan placeholder baru */
+}
+
+/* logo */
+.container-logo {
+  background: none;
+  text-align: center;
+  padding: 20px;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.logo {
+  margin: 10px;
+  transition: transform 0.2s ease;
+  width: 100%; /* Menggunakan lebar penuh dari kontainer */
+  max-width: 200px; /* Lebar maksimum 200px */
+  height: auto;
+}
+
+
+
+/* about */
+.img-about {
+  position: relative; /* Set the parent container to relative */
+  width: 600px;
+  height: 700px;
+}
+
+.about-img {
+  max-width: 400px;
+  height: auto;
+  border: 5px solid #fff;
+  border-radius: 15px;
+  margin-left: 130px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.about-img2 {
+  max-width: 300px;
+  height: auto;
+  border: 5px solid #fff;
+  border-radius: 15px;
+  position: absolute; /* Use 'position' to overlap */
+  z-index: 2; /* Ensure this is higher than about-img */
+  left: 10px; /* Use 'px' for positioning */
+  bottom: 60px; /* Use 'px' for positioning */
+}
+.about-img3 {
+  max-width: 300px;
+  height: auto;
+  border: 5px solid #fff;
+  border-radius: 15px;
+  position: absolute; /* Use 'position' to overlap */
+  z-index: 3; /* Ensure this is higher than about-img */
+  right: -200px; /* Use 'px' for positioning */
+  top: -40px; /* Use 'px' for positioning */
+}
+@media (max-width: 1440px) {
+
+  .about-img2{
+    max-width: 300px;
+    height: auto;
+    border: 5px solid #fff;
+    border-radius: 15px;
+    position: absolute; /* Use 'position' to overlap */
+    z-index: 2; /* Ensure this is higher than about-img */
+    left: 10px; /* Use 'px' for positioning */
+    bottom: 60px; /* Use 'px' for positioning */
+  }
+  
+  .about-img3 {
+    display: none !important; /* Elemen benar-benar dihapus dari layout */
+  }
+  .about-img {
+    max-width: 400px;
+    height: auto;
+
+  }
+}
+@media (max-width: 1024px) {
+
+  .about-img2,
+  .about-img3 {
+    display: none !important; /* Elemen benar-benar dihapus dari layout */
+  }
+  .about-img {
+    max-width: 300px;
+    height: auto;
+    margin-top: 100px;
+
+  }
+}
+@media (max-width: 769px) {
+  .img-about,
+  .about-img,
+  .about-img2,
+  .about-img3 {
+    display: none !important; /* Elemen benar-benar dihapus dari layout */
+  }
+}
+
+@media (max-width: 480px) {
+  .img-about,
+  .about-img,
+  .about-img2,
+  .about-img3 {
+    display: none !important; /* Elemen benar-benar dihapus dari layout */
+  }
+}
+
+/* Contoh aturan untuk menampilkan kembali pada ukuran layar yang lebih besar */
+@media (min-width: 769px) {
+  .img-about,
+  .about-img,
+  .about-img2,
+  .about-img3 {
+    display: block; /* Atur kembali ke nilai semula sesuai kebutuhan */
+  }
+}
+
+.section-text-about {
+  color: #fff;
+  margin-bottom: 30px;
+  margin-left: 15px;
+  font-size: 17px;
+}

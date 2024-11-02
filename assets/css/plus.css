@@ -1,0 +1,127 @@
+.menu-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.menu-item {
+    background-color: #ffffff;
+    border-radius: 25px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.2s;
+    text-decoration: none; /* Remove underline for links */
+    color: #333; /* Set text color for links */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center the content */
+    align-items: center; /* Horizontally center the content */
+    height: 150px; /* Adjust this height as needed */
+}
+
+.menu-item img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px; /* Space between image and text */
+}
+
+.menu-item p {
+    font-size: 14px;
+    color: #333;
+}
+
+.menu-item:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .menu-container {
+        grid-template-columns: repeat(2, 1fr); /* 2x4 layout for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-container {
+        grid-template-columns: 1fr 1fr; /* 2x2 layout for mobile */
+        gap: 15px;
+    }
+}
+
+/* SCROLL NEWS */
+
+.scroll-container {
+    display: flex;
+    overflow-x: auto;
+  }
+
+  .popular-list {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .popular-card {
+    min-width: 250px;
+    flex-shrink: 0;
+  }
+
+  .popular-card img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .scroll-container::-webkit-scrollbar {
+    display: none; /* Menghilangkan scrollbar di browser berbasis WebKit seperti Chrome */
+  }
+
+  /* CONTACT POPUP */
+
+  .modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+  }
+
+  .modal-content {
+    background-color: white;
+    margin: 15% auto;
+    border-radius: 25px;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+    max-width: 600px;
+  }
+
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+
+  /* Map iframe */
+  iframe {
+    width: 100%;
+    height: 200px;
+    border: 0;
+  }

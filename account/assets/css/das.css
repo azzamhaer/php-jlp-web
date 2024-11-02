@@ -1,0 +1,99 @@
+button {
+    font: inherit;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    transition: 1s ;
+  }
+  
+  button:hover {
+    border: none;
+    background-color: #139C59;
+    color: #ffffff;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transition: 0.5s ;
+  }
+  
+  .profile-card-wrapper {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 32px;
+    border-radius: 5px;
+  }
+
+  .card {
+    padding: 20px;
+    border-radius: 10px;
+}
+.stats {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+.stats .stat {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.stats .stat i {
+    font-size: 24px;
+    margin-right: 10px;
+    color: #27ae60;
+}
+.stats .stat .value {
+    font-size: 24px;
+    font-weight: 500;
+}
+.stats .stat .label {
+    color: #7f8c8d;
+}
+
+.container9 {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  min-height: 100vh;
+}
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.card0 {
+  padding: 20px;
+  border-radius: 10px;
+}
+.revenue {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.revenue .amount {
+  font-size: 36px;
+  font-weight: 700;
+}
+.revenue .change {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.revenue .change .percentage {
+  display: flex;
+  align-items: center;
+}
+.revenue .change .percentage i {
+  margin-right: 5px;
+}
+.revenue .change .percentage.up {
+  color: #27ae60;
+  margin: 5px; 
+}
+.revenue .change .percentage.down {
+  color: #e74c3c;
+}

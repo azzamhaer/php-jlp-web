@@ -1,0 +1,14 @@
+.sticky {
+    position: -webkit-sticky; /* Untuk dukungan di Safari */
+    position: sticky;
+    top: 10px; /* Tambahkan jarak dari atas */
+    z-index: 1000; /* Agar tetap di atas elemen lainnya */
+    background-color: white; /* Agar memiliki background yang solid */
+    margin-top: 10px; /* Jarak dari elemen di atasnya */
+    box-shadow: none; /* Tidak ada bayangan secara default */
+    transition: box-shadow 0.3s ease-in-out; /* Animasi transisi bayangan */
+}
+
+.sticky.shadow {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}

@@ -1,0 +1,126 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    padding: 20px;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #f1f1f1;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .back-button {
+    top: 15px;
+    left: 15px;
+    background: #fff;
+    border-radius: 50%;
+    width: 40px; /* Atur lebar dan tinggi sama */
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+  .image-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  
+  .image-container img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 15px;
+  }
+  
+  .collab {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .collab p {
+    max-width: 800px;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #fff;
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+  }
+  
+  .report-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .report-item {
+    background-color: #fff;
+    padding: 10px 15px 10px 30px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ddd;
+  }
+  
+  .report-item .sub p {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .report-item .sub .description {
+    font-size: 10px;
+    margin-bottom: 5px;
+  }
+  
+  .download-button {
+    text-decoration: none;
+    color: #fff;
+    background-color: #4caf50;
+    padding: 10px;
+    border-radius: 60px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    padding: 10px 20px;
+  }
+  
+  @media (min-width: 768px) {
+    .report-list {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+  
+    .report-item {
+      width: 48%;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .report-item {
+      width: 30%;
+    }
+  }

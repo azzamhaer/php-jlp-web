@@ -1,0 +1,61 @@
+        /* Styling untuk search bar dan hasil pencarian */
+        #search-results {
+            margin-top: 15px;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 15px;
+            display: none;
+            max-height: 400px;
+            overflow-y: auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            -ms-overflow-style: none;  /* IE dan Edge */
+            scrollbar-width: none;     /* Firefox */
+        }
+        #search-results::-webkit-scrollbar {
+            display: none;             /* Chrome, Safari, dan Opera */
+        }
+        .result-image {
+          width: 50px;
+          height: 50px;
+          object-fit: cover;
+          border-radius: 10px;
+          margin-right: 10px;
+        }
+
+        .result-section {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .result-item {
+            padding: 10px;
+            cursor: pointer;
+            align-items: center;
+            display: flex; 
+        }
+
+        .result-item:hover {
+            background-color: #f1f1f1;
+        }
+
+        .section-title {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        .result-category {
+          padding: 10px;
+            cursor: pointer;
+            align-items: center;
+            display: flex;
+            font-weight: 550;
+            font-size: larger;
+        }
+        .brand {
+          color: black;
+        }
